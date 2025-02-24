@@ -88,6 +88,7 @@ public class HelloWorldServer {
     @Override
     public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
       HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + req.getName()).build();
+      logger.info("server:::Hello " + req.getName());
       responseObserver.onNext(reply);
       responseObserver.onCompleted();
     }

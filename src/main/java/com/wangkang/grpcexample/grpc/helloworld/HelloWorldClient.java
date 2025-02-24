@@ -34,7 +34,7 @@ public class HelloWorldClient {
      * Say hello to server.
      */
     public void greet(String name) {
-        logger.info("Will try to greet " + name + " ...");
+        logger.info("client:::Will try to greet " + name + " ...");
         HelloRequest request = HelloRequest.newBuilder().setName(name).build();
         HelloReply response;
         try {
@@ -43,7 +43,7 @@ public class HelloWorldClient {
             logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
             return;
         }
-        logger.info("Greeting: " + response.getMessage());
+        logger.info("client:::Greeting: " + response.getMessage());
     }
 
     /**
