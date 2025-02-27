@@ -27,7 +27,7 @@ public class HelloWorldClient {
         // shut it down.
 
         // Passing Channels to code makes code easier to test and makes it easier to reuse Channels.
-        blockingStub = GreeterGrpc.newBlockingStub(channel);
+        blockingStub = GreeterGrpc.newBlockingStub(channel).withWaitForReady();
     }
 
     /**
